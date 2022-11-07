@@ -1,0 +1,14 @@
+<section class="w-100">
+<h2 class="orange-text center-align">Your Overview</h2>
+{{#if reviews.length}}
+    {{#each reviews as |review|}}
+      {{> user-card review}}
+    {{/each}}
+</section>
+{{else}}
+<div class="orange-text center-align">
+<h3>Oops... No Reviews</h3>
+<h4>Get Started Below!</h4>
+<button class="blue darken-2" onclick="location.href='/hero-search'" type="button">Get Started</button>
+</div>
+{{/if}}

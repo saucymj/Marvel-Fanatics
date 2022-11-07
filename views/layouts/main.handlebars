@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marvel Fanatics</title>
+  <link rel="stylesheet" href="/css/style.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+</head>
+
+<body class="black">
+     <nav class="black">
+    <div class="nav-wrapper">
+      <div class="container">
+        <a href="/" class="brand-logo orange-text text-lighten-2"><i class="material-icons orange-text text-lighten-2">home</i>Marvel Fanatics</a>
+      <ul id="nav-mobile" class="right show-on-large">
+        {{#if loggedIn}}
+        <li><a class="nav-link orange-text text-lighten-2" href="/reviews">Reviews</a></li>
+        <li><a class="nav-link orange-text text-lighten-2" href="/overview">Overview</a></li>
+        <li><a href="/hero-search" class="nav-link orange-text text-lighten-2" ><i class="material-icons">add</i></a></li>
+        <li><a id="logout" class="nav-link orange-text text-lighten-2" href="/">Log Out</a></li>
+      </ul>
+      {{else}}
+      <ul class="right">
+    <li><a class="nav-link orange-text text-lighten-2" href="/login">Log In/Sign Up</a></li>
+     {{/if}}
+      </ul>
+    </div>
+    </div>
+  </nav>
+  
+
+    <main>
+        {{{body}}}
+    </main>
+    
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</html>
+
