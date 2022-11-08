@@ -1,5 +1,5 @@
 {
-  "name": "tuned-out",
+  "name": "marvel-fanatics",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/saucymj/Tuned-Out.git"
+    "url": "git+https://github.com/saucymj/Marvel-Fanatics.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/saucymj/Tuned-Out/issues"
+    "url": "https://github.com/saucymj/Marvel-Fanatics/issues"
   },
-  "homepage": "https://github.com/saucymj/Tuned-Out#readme",
+  "homepage": "https://github.com/saucymj/Marvel-Fanatics#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "connect-session-sequelize": "^7.1.5",
@@ -32,5 +32,6 @@
     "mysql2": "^2.3.3",
     "path": "^0.12.7",
     "sequelize": "^6.25.5"
-  }
+  },
+  "devDependencies": {}
 }
