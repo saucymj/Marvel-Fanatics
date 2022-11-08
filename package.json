@@ -30,7 +30,7 @@
     "googleapis": "^109.0.0",
     "materialize": "^1.0.0",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.25.3"
-  },
-  "devDependencies": {}
+    "path": "^0.12.7",
+    "sequelize": "^6.25.5"
+  }
 }
