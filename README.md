@@ -11,7 +11,6 @@ The server requires Node.js, handlebars, materialize, express, mysql, session to
 ## Usage
 
 Before logging in or creating account :
-
     ![298A0F1D-BF9F-44D6-8051-50D55FC63A4F](https://user-images.githubusercontent.com/106449899/201456194-87865624-347b-4d32-81dd-1b3ed1061c93.jpeg)
 
 After :
