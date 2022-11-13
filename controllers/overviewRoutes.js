@@ -10,7 +10,7 @@ router.get("/", withAuth,  (req, res) => {
     attributes: [
       "id",
       "reviewMessage",
-      "hero_id"
+      "hero_name"
     ],
     include: [
       {
@@ -34,39 +34,7 @@ router.get("/", withAuth,  (req, res) => {
     });
 });
 
-router.get("/edit/:id", withAuth, (req, res) => {
-  Review.findByPk(req.params.id, {
-      attributes: [
-        "id",
-        "reviewMessage",
-        "hero_id",
-      ],
-    include: [
-      {
-        model: Hero,
-        attributes: ["id", "name", "decription", "picture"],
-      },
-      {
-        model: User,
-        attributes: ["username"],
-      },
-    ],
-  })
-    .then((reviewdData) => {
-      if (reviewdData) {
-        const review = reviewdData.get({ plain: true });
-        res.render("edit-review", {
-          review,
-          loggedIn: true,
-        });
-      } else {
-        res.status(404).end();
-      }
-    })
-    .catch((err) => {
-      res.status(500).json(err);
-    });
-});
+
 
 
 module.exports = router;

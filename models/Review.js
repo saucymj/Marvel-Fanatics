@@ -22,11 +22,11 @@ Review.init(
                 key: "id",
             },
         },
-        hero_id: {
-            type: DataTypes.INTEGER,
+        hero_name: {
+            type: DataTypes.STRING,
             references: {
                 model: "hero",
-                key: "id",
+                key: "name",
             },
         },
     },

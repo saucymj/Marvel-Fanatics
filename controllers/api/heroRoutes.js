@@ -12,7 +12,7 @@ router.get('/', withAuth, async (req, res) => {
                 attributes: [
                   "id",
                   "reviewMessage",
-                  "hero_id",
+                  "hero_name",
                   "user_id",
                 ],
                 include: {
@@ -43,7 +43,7 @@ router.get("/:id", async (req, res) => {
                 attributes: [
                 "id",
                 "reviewMessage",
-                "hero_id",
+                "hero_name",
                 "user_id",
             ]    
             }],
@@ -69,7 +69,7 @@ router.get("/:id", async (req, res) => {
 router.post('/', withAuth, async (req, res) => {
     try {
         const heroData = await Hero.create({
-            id: req.body.hero_id,
+            id: req.body.id,
             name: req.body.name,
             description: req.body.description,
             picture: req.body.picture,

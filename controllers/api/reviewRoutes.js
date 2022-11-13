@@ -5,9 +5,12 @@ const withAuth = require('../../utils/auth');
 router.post('/', withAuth, async  (req, res) => {
     try {
         const reviewData = await Review.create({
-            reviewMessage: req.body.reviewMessage,
+          where: {
             user_id: req.session.user_id,
-            hero_id: req.body.hero_id,
+          },
+            reviewMessage: req.body.reviewMessage,
+            hero_name: req.body.hero_name,
+            username: req.body.username
         });
 
         res.status(200).json(reviewData);
@@ -39,22 +42,6 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get("/user-review", (req, res) => {
-    Review.findAll({
-      where: {
-        user_id: req.session.user_id,
-      },
-      attributes: ["hero_id"],
-    })
-      .then((reviewData) => {
-        const review = reviewData.map((post) => post.get({ plain: true }));
-        res.json(review);
-      })
-      .catch((err) => {
-        console.log(err);
-        res.status(500).json(err);
-      });
-  });
 
   router.put("/:id", (req, res) => {
     Review.update(

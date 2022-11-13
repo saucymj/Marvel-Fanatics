@@ -4,7 +4,7 @@ const Review = require('./Review');
 
 
 Hero.hasMany(Review, {
-    foreignKey: 'hero_id',
+    foreignKey: 'hero_name',
 });
 
 User.hasMany(Review, {
@@ -12,7 +12,7 @@ User.hasMany(Review, {
 });
 
 Review.belongsTo(Hero, {
-    foreignKey: "hero_id",
+    foreignKey: "hero_name",
 });
 
 Review.belongsTo(User, {
