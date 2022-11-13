@@ -1,14 +1,14 @@
 
 <h2 class="orange-text center-align">Your Overview</h2>
-{{#if reviews.length}}
+{{#if reviewMessage}}
     {{#each reviews as |review|}}
-      {{> review-card review}}
+      {{> review-card}}
     {{/each}}
 </section>
 {{else}}
 <div class="orange-text center-align">
 <h3>Oops... No Reviews</h3>
 <h4>Get Started Below!</h4>
-<button class="indigo accent-2" onclick="location.href='/hero-search'" type="button">Get Started</button>
+<a href="/hero-search"><button class="indigo accent-2"type="button">Get Started</button></a>
 </div>
 {{/if}}
