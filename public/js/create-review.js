@@ -13,7 +13,7 @@ try {
     });
 
     if (response.ok) {
-      document.location.replace('/overview');
+      document.location.replace('/reviews');
     } else {
       alert('We could not add your review, try again in 1 minute.');
     }
