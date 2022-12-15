@@ -13,7 +13,6 @@ const heroSearch = async (event) => {
           .then((response) => response.json())
           .then((data) => {
             showHero(data);
-            console.log(data.data.results[0].comics.items[0].resourceURI);
           });
     } catch (err) {
       console.log(err);
